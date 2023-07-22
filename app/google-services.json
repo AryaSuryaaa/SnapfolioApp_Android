@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "809629196209",
+    "project_id": "snapfolio2",
+    "storage_bucket": "snapfolio2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809629196209:android:3dc987020329a41c422790",
+        "android_client_info": {
+          "package_name": "com.aryasurya.snapfolio2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809629196209-pdol51sr591uilpvn0ud2amhjdgvkcei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aryasurya.snapfolio2",
+            "certificate_hash": "4057d06b8b7ab0548d4f97d43ad6c74c8fc7a238"
+          }
+        },
+        {
+          "client_id": "809629196209-misl2v5khvengvqdudsu0ihn7nnok9uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKDnU_Jx-wM5SUdaqjzgKeYp5RtBJk3kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809629196209-misl2v5khvengvqdudsu0ihn7nnok9uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

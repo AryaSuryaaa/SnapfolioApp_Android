@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="?attr/colorPrimary">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:indeterminate="true"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="270dp"
+            android:src="@drawable/bg_regist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitEnd"/>
+
+        <ImageView
+            android:id="@+id/logo_app"
+            android:layout_width="198dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/logo_snapfolio_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_regist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/rounded_img"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageButton
+                android:id="@+id/icon_google"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_btn"
+                android:src="@drawable/google_icon"
+                app:layout_constraintEnd_toStartOf="@id/icon_facebook"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/detail_regist" />
+
+
+            <ImageButton
+                android:id="@+id/icon_facebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_btn"
+                android:src="@drawable/facebook_icon"
+                app:layout_constraintEnd_toStartOf="@id/icon_twitter"
+                app:layout_constraintStart_toEndOf="@id/icon_google"
+                app:layout_constraintTop_toTopOf="@id/icon_google" />
+
+            <ImageButton
+                android:id="@+id/icon_twitter"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_btn"
+                android:src="@drawable/twitter_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon_facebook"
+                app:layout_constraintTop_toTopOf="@id/icon_google" />
+
+            <TextView
+                android:id="@+id/tv_acc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="or use your email account"
+                app:layout_constraintBottom_toTopOf="@id/layout_email"
+                app:layout_constraintEnd_toEndOf="@id/icon_twitter"
+                app:layout_constraintStart_toStartOf="@id/icon_google"
+                app:layout_constraintTop_toBottomOf="@id/icon_google" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="email"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_acc">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="username"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="@id/layout_email"
+                app:layout_constraintStart_toStartOf="@id/layout_email"
+                app:layout_constraintTop_toBottomOf="@id/layout_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="password"
+                app:endIconMode="password_toggle"
+                app:layout_constraintEnd_toEndOf="@id/layout_username"
+                app:layout_constraintStart_toStartOf="@id/layout_username"
+                app:layout_constraintTop_toBottomOf="@id/layout_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nomor_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="nomor telephone"
+                app:prefixText="+62"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="@id/layout_email"
+                app:layout_constraintStart_toStartOf="@id/layout_email"
+                app:layout_constraintTop_toBottomOf="@id/layout_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/telephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Register"
+                app:layout_constraintEnd_toEndOf="@id/layout_email"
+                app:layout_constraintStart_toStartOf="@id/layout_email"
+                app:layout_constraintTop_toBottomOf="@id/nomor_telephone" />
+
+            <TextView
+                android:id="@+id/tv_haveacc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:enabled="false"
+                android:text="Already have an account?"
+                app:layout_constraintEnd_toStartOf="@+id/to_login"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_regist" />
+
+            <Button
+                android:id="@+id/to_login"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login here"
+                app:layout_constraintBottom_toBottomOf="@id/tv_haveacc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_haveacc"
+                app:layout_constraintTop_toTopOf="@id/tv_haveacc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
